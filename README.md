@@ -20,6 +20,19 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## Cloudflare Pages
+
+Use these settings:
+
+```txt
+Framework preset: Next.js
+Build command: npm run build
+Build output directory: out
+Node version: 22
+```
+
+The project is configured with `output: "export"` so Cloudflare publishes the static `out` folder instead of uploading `.next` build cache files.
+
 ## Supabase
 
 Copy `.env.example` to `.env.local` and set:

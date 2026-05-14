@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { articles, matches } from "@/lib/data";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://worldcupgames.us";
   const staticRoutes = ["", "/match-center", "/simulator", "/login", "/admin"];
