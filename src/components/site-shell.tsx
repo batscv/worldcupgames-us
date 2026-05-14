@@ -3,9 +3,9 @@ import { Search, Sparkles, Trophy, UserRound } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const nav = [
-  ["News", "/news/world-cup-2026-ai-power-rankings"],
-  ["Predictions", "/predictions/united-states-vs-brazil"],
-  ["Watch", "/watch/united-states-vs-brazil-live"],
+  ["News", "/#database-news"],
+  ["Predictions", "/match-center"],
+  ["Watch", "/match-center"],
   ["Match Center", "/match-center"],
   ["Simulator", "/simulator"],
   ["Admin", "/admin"],

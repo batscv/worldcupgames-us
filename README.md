@@ -37,6 +37,10 @@ Add this Cloudflare Pages environment variable before deploying the football-dat
 
 ```txt
 FOOTBALL_DATA_API_TOKEN=your_token_here
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your_supabase_publishable_key
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+SYNC_SECRET=optional_private_sync_password
 ```
 
 The token is consumed only by the Pages Function at `/api/football-data/*`, so it is not bundled into browser JavaScript.
@@ -48,6 +52,15 @@ Example proxied endpoints:
 /api/football-data/competitions/WC/teams
 /api/football-data/competitions/WC/matches?status=SCHEDULED
 ```
+
+To write football-data.org fixtures into Supabase, call:
+
+```bash
+curl -X POST https://your-domain.com/api/sync/football-data \
+  -H "Authorization: Bearer your_SYNC_SECRET"
+```
+
+The frontend homepage reads from Supabase tables first. If tables are empty, it renders empty states instead of placeholder content.
 
 ## Supabase
 
