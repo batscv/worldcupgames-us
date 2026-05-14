@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CirclePlay, Flame, Mail, Radar, ShieldCheck, Sparkles, Trophy } from "lucide-react";
 import { AffiliateStrip, ArticleCard, MatchCard, RankingsCard } from "@/components/cards";
+import { LiveApiPanel } from "@/components/football-data/live-api-panel";
 import { Badge, PageShell } from "@/components/site-shell";
 import { articles, matches, standings } from "@/lib/data";
 
@@ -76,6 +77,8 @@ export default function Home() {
       </section>
 
       <AffiliateStrip />
+
+      <LiveApiPanel />
 
       <section className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
         <div>

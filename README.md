@@ -33,6 +33,22 @@ Node version: 22
 
 The project is configured with `output: "export"` so Cloudflare publishes the static `out` folder instead of uploading `.next` build cache files.
 
+Add this Cloudflare Pages environment variable before deploying the football-data.org integration:
+
+```txt
+FOOTBALL_DATA_API_TOKEN=your_token_here
+```
+
+The token is consumed only by the Pages Function at `/api/football-data/*`, so it is not bundled into browser JavaScript.
+
+Example proxied endpoints:
+
+```txt
+/api/football-data/matches?competitions=WC
+/api/football-data/competitions/WC/teams
+/api/football-data/competitions/WC/matches?status=SCHEDULED
+```
+
 ## Supabase
 
 Copy `.env.example` to `.env.local` and set:
