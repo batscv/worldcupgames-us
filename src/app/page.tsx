@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CirclePlay, Flame, Mail, Radar, ShieldCheck, Sparkles, Trophy } from "lucide-react";
 import { AffiliateStrip, ArticleCard, MatchCard, RankingsCard } from "@/components/cards";
-import { LiveApiPanel } from "@/components/football-data/live-api-panel";
+import { WorldCupFeed } from "@/components/football-data/world-cup-feed";
 import { Badge, PageShell } from "@/components/site-shell";
 import { articles, matches, standings } from "@/lib/data";
 
@@ -66,7 +66,7 @@ export default function Home() {
       <section className="grid gap-6 lg:grid-cols-[1fr_340px]">
         <div>
           <div className="mb-4 flex items-center justify-between">
-            <h2 className="text-2xl font-bold">Live matches and AI probabilities</h2>
+            <h2 className="text-2xl font-bold">AI probability cards</h2>
             <Link href="/match-center" className="flex items-center gap-2 text-sm text-blue-200">Match center <ArrowRight className="size-4" /></Link>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -78,7 +78,7 @@ export default function Home() {
 
       <AffiliateStrip />
 
-      <LiveApiPanel />
+      <WorldCupFeed />
 
       <section className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
         <div>
