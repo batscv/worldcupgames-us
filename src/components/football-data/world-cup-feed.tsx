@@ -11,7 +11,7 @@ const emptyResponse: FootballDataMatchesResponse = {
 
 export function WorldCupFeed() {
   const [data, setData] = useState<FootballDataMatchesResponse>(emptyResponse);
-  const [status, setStatus] = useState("TIMED");
+  const [status, setStatus] = useState("ALL");
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(true);
   const [refreshedAt, setRefreshedAt] = useState<Date | null>(null);
@@ -108,10 +108,10 @@ export function WorldCupFeed() {
             }}
             className="h-11 rounded-full border border-white/10 bg-[#0b1020] px-4 text-sm outline-none"
           >
+            <option value="ALL">All</option>
             <option value="TIMED">Upcoming</option>
             <option value="LIVE">Live</option>
             <option value="FINISHED">Finished</option>
-            <option value="ALL">All</option>
           </select>
           <button
             onClick={() => loadMatches(status)}
