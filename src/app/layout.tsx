@@ -11,11 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://worldcupgames.us"),
   title: {
-    default: "WorldCupGames.us | AI World Cup 2026 Predictions, News and Live Scores",
+    default: "WorldCupGames.us | World Cup 2026 News, Fixtures and Results",
     template: "%s | WorldCupGames.us",
   },
   description:
-    "Premium AI-powered FIFA World Cup 2026 platform for predictions, live match coverage, SEO news, brackets, watch guides and fan rankings.",
+    "World Cup 2026 news, fixtures, results and editorial coverage powered by Supabase.",
   applicationName: "WorldCupGames.us",
   keywords: [
     "World Cup 2026",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "WorldCupGames.us",
-    description: "A next-generation World Cup 2026 platform powered by AI.",
+    description: "World Cup 2026 news, fixtures and results.",
     url: "https://worldcupgames.us",
     siteName: "WorldCupGames.us",
     type: "website",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "WorldCupGames.us",
-    description: "AI predictions, live coverage and premium World Cup 2026 experiences.",
+    description: "World Cup 2026 news, fixtures and results.",
   },
 };
 
@@ -43,7 +43,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full">
-        <div className="noise" />
         {children}
       </body>
     </html>
