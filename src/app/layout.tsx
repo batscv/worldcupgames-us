@@ -11,23 +11,23 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://worldcupgames.us"),
   title: {
-    default: "WorldCupGames.us | World Cup 2026 News, Fixtures and Results",
+    default: "WorldCupGames.us | Noticias da Copa do Mundo 2026",
     template: "%s | WorldCupGames.us",
   },
   description:
-    "World Cup 2026 news, fixtures, results and editorial coverage powered by Supabase.",
+    "Noticias de futebol, Copa do Mundo 2026, resultados, calendario e cobertura editorial com CMS Supabase.",
   applicationName: "WorldCupGames.us",
   keywords: [
     "World Cup 2026",
-    "FIFA predictions",
+    "noticias de futebol",
     "live scores",
     "football news",
-    "where to watch World Cup",
-    "World Cup simulator",
+    "resultados Copa do Mundo",
+    "Copa do Mundo noticias",
   ],
   openGraph: {
     title: "WorldCupGames.us",
-    description: "World Cup 2026 news, fixtures and results.",
+    description: "Noticias da Copa do Mundo 2026, futebol, calendario e resultados.",
     url: "https://worldcupgames.us",
     siteName: "WorldCupGames.us",
     type: "website",
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "WorldCupGames.us",
-    description: "World Cup 2026 news, fixtures and results.",
+    description: "Noticias da Copa do Mundo 2026, futebol, calendario e resultados.",
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="pt" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full">
         {children}
       </body>
